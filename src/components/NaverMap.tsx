@@ -22,9 +22,9 @@ interface NaverMapProps {
 export default function NaverMap({
   width = '100%',
   height = '400px',
-  center = { lat: 37.5665, lng: 126.9780 }, // 서울시청 기본값
+  center = { lat: 37.5665, lng: 126.978 }, // 서울시청 기본값
   zoom = 15,
-  className = ''
+  className = '',
 }: NaverMapProps) {
   const mapRef = useRef<HTMLDivElement>(null)
   const mapInstance = useRef<any>(null)
@@ -39,23 +39,26 @@ export default function NaverMap({
         mapTypeControl: true,
         mapTypeControlOptions: {
           style: window.naver.maps.MapTypeControlStyle.BUTTON,
-          position: window.naver.maps.Position.TOP_RIGHT
+          position: window.naver.maps.Position.TOP_RIGHT,
         },
         zoomControl: true,
         zoomControlOptions: {
           style: window.naver.maps.ZoomControlStyle.SMALL,
-          position: window.naver.maps.Position.RIGHT_CENTER
-        }
+          position: window.naver.maps.Position.RIGHT_CENTER,
+        },
       }
 
-      mapInstance.current = new window.naver.maps.Map(mapRef.current, mapOptions)
+      mapInstance.current = new window.naver.maps.Map(
+        mapRef.current,
+        mapOptions,
+      )
     }
 
     if (window.naver && window.naver.maps) {
       initializeMap()
     } else {
       const script = document.createElement('script')
-      script.src = `https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_NCP_CLIENT_ID}`
+      script.src = `https://openapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${process.env.NEXT_PUBLIC_NCP_CLIENT_ID}`
       script.onload = initializeMap
       document.head.appendChild(script)
 

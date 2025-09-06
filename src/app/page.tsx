@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import NaverMap from "src/components/NaverMap";
+import { ResponsiveAd, BannerAd } from "src/components/AdSense";
 
 export default function Home() {
   return (
@@ -32,6 +33,11 @@ export default function Home() {
             매매비용, DSR 계산, 청약 정보까지 한 번에 확인하세요.<br />
             정확한 계산으로 현명한 부동산 투자를 시작하세요.
           </p>
+        </div>
+
+        {/* Top Banner Ad */}
+        <div className="mb-8 flex justify-center">
+          <BannerAd className="max-w-4xl" />
         </div>
 
         {/* Calculator Cards */}
@@ -80,6 +86,11 @@ export default function Home() {
               </div>
             </div>
           </Link>
+        </div>
+
+        {/* Middle Responsive Ad */}
+        <div className="mb-12 flex justify-center">
+          <ResponsiveAd className="max-w-4xl w-full" />
         </div>
 
         {/* Map Section */}
@@ -131,7 +142,10 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-400">
+          <div className="flex justify-center space-x-6 mb-4">
+            <Link href="/privacy" className="text-gray-400 hover:text-white text-sm">개인정보처리방침</Link>
+          </div>
+          <p className="text-gray-400 text-sm">
             © 2024 부동산 계산기. 모든 계산 결과는 참고용이며, 실제 거래 시에는 전문가와 상담하시기 바랍니다.
           </p>
         </div>
