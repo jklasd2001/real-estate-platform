@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import NaverMap from "src/components/NaverMap";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -78,6 +80,24 @@ export default function Home() {
               </div>
             </div>
           </Link>
+        </div>
+
+        {/* Map Section */}
+        <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">부동산 위치 확인</h3>
+          <p className="text-gray-600 text-center mb-6">
+            지도에서 원하는 지역의 부동산 위치를 확인하고 주변 시세를 파악해보세요
+          </p>
+          <div className="flex justify-center">
+            <div className="w-full max-w-4xl">
+              <NaverMap 
+                height="500px"
+                center={{ lat: 37.5665, lng: 126.9780 }}
+                zoom={12}
+                className="shadow-md"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Features */}
