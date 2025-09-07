@@ -10,6 +10,13 @@ export default function CalculatorsPage() {
       features: ['취득세 계산', '등록세 계산', '중개수수료 계산', '기타 비용 포함']
     },
     {
+      title: '종합 대출 계산',
+      description: '주택담보, 전세, 필요자금을 종합적으로 계산하여 최적의 대출 계획을 세우세요',
+      icon: '🏦',
+      href: '/calculators/loan',
+      features: ['대출 한도 계산', '월 납입액 계산', '필요 자금 계산', '2024년 정책 반영']
+    },
+    {
       title: 'DSR 계산',
       description: '총부채원리금상환비율을 계산하여 대출 가능 여부를 확인하세요',
       icon: '📊',
@@ -53,7 +60,7 @@ export default function CalculatorsPage() {
         </div>
 
         {/* Calculator Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-12">
           {calculators.map((calculator, index) => (
             <Link key={index} href={calculator.href} className="group">
               <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1">
@@ -85,11 +92,19 @@ export default function CalculatorsPage() {
         {/* Quick Access */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">빠른 접근</h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link href="/calculators/purchase-cost" className="group">
               <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-6 text-center hover:from-blue-100 hover:to-blue-200 transition-colors">
                 <div className="text-3xl mb-3">💰</div>
                 <h4 className="font-semibold text-gray-900 mb-2">매매비용</h4>
+                <p className="text-sm text-gray-600">즉시 계산</p>
+              </div>
+            </Link>
+            
+            <Link href="/calculators/loan" className="group">
+              <div className="bg-gradient-to-r from-emerald-50 to-emerald-100 rounded-lg p-6 text-center hover:from-emerald-100 hover:to-emerald-200 transition-colors">
+                <div className="text-3xl mb-3">🏦</div>
+                <h4 className="font-semibold text-gray-900 mb-2">종합 대출</h4>
                 <p className="text-sm text-gray-600">즉시 계산</p>
               </div>
             </Link>

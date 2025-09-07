@@ -41,16 +41,31 @@ export default function Home() {
         </div>
 
         {/* Calculator Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <Link href="/calculators/purchase-cost" className="group">
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1">
               <div className="text-center">
-                <div className="text-4xl mb-4">💰</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">매매비용 계산</h3>
-                <p className="text-gray-600 mb-4">
-                  부동산 매매 시 발생하는 모든 비용을 미리 계산해보세요
+                <div className="text-4xl mb-3">💰</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">매매비용 계산</h3>
+                <p className="text-sm text-gray-600 mb-3">
+                  부동산 매매 시 발생하는 모든 비용을 미리 계산
                 </p>
-                <div className="text-blue-600 font-medium group-hover:text-blue-700">
+                <div className="text-blue-600 font-medium group-hover:text-blue-700 text-sm">
+                  계산하기 →
+                </div>
+              </div>
+            </div>
+          </Link>
+
+          <Link href="/calculators/loan" className="group">
+            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1">
+              <div className="text-center">
+                <div className="text-4xl mb-3">🏦</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">종합 대출 계산</h3>
+                <p className="text-sm text-gray-600 mb-3">
+                  주택담보, 전세, 필요자금을 종합 계산
+                </p>
+                <div className="text-blue-600 font-medium group-hover:text-blue-700 text-sm">
                   계산하기 →
                 </div>
               </div>
@@ -58,14 +73,14 @@ export default function Home() {
           </Link>
 
           <Link href="/calculators/dsr" className="group">
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1">
               <div className="text-center">
-                <div className="text-4xl mb-4">📊</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">DSR 계산</h3>
-                <p className="text-gray-600 mb-4">
-                  총부채원리금상환비율을 계산하여 대출 가능 여부를 확인하세요
+                <div className="text-4xl mb-3">📊</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">DSR 계산</h3>
+                <p className="text-sm text-gray-600 mb-3">
+                  총부채원리금상환비율 계산 및 대출 가능 여부 확인
                 </p>
-                <div className="text-blue-600 font-medium group-hover:text-blue-700">
+                <div className="text-blue-600 font-medium group-hover:text-blue-700 text-sm">
                   계산하기 →
                 </div>
               </div>
@@ -73,14 +88,14 @@ export default function Home() {
           </Link>
 
           <Link href="/calculators/subscription" className="group">
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1">
               <div className="text-center">
-                <div className="text-4xl mb-4">🏘️</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">청약 정보</h3>
-                <p className="text-gray-600 mb-4">
-                  청약 가능 여부와 우선순위를 확인하고 청약 전략을 세워보세요
+                <div className="text-4xl mb-3">🏘️</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">청약 정보</h3>
+                <p className="text-sm text-gray-600 mb-3">
+                  청약 가능 여부와 우선순위 확인, 청약 전략 수립
                 </p>
-                <div className="text-blue-600 font-medium group-hover:text-blue-700">
+                <div className="text-blue-600 font-medium group-hover:text-blue-700 text-sm">
                   확인하기 →
                 </div>
               </div>
