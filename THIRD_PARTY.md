@@ -1,4 +1,6 @@
-# Naver Cloud Platform Naver Maps
+# Third Parties
+
+## Naver Cloud Platform Naver Maps
 
 [https://console.ncloud.com/maps/application](https://console.ncloud.com/maps/application)
 
@@ -9,3 +11,7 @@
 ## 공공데이터포털
 
 [https://auth.data.go.kr/sso/common-login?client_id=hagwng3yzgpdmbpr2rxn&redirect_url=https://data.go.kr/sso/profile.do](https://auth.data.go.kr/sso/common-login?client_id=hagwng3yzgpdmbpr2rxn&redirect_url=https://data.go.kr/sso/profile.do)
+
+## Supabase
+
+[https://supabase.com/dashboard/project/wmnblfpgpsinzmnlaqjo](https://supabase.com/dashboard/project/wmnblfpgpsinzmnlaqjo)
